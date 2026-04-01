@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIN-TOKYO 95 | Archive</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.svg">
+</head>
+<body>
+
+    <div id="splash-screen">
+        <div class="terminal-loader">
+            <div class="loader-line">> BOOTING_SHIN-TOKYO_95_v1.0...</div>
+            <div class="loader-line">> CONNECTING SECTOR_7_HUB...</div>
+            <div class="loader-line">> LOADING_ARCHIVE... <span class="spinner">[-\|/]</span></div>
+            <div class="loader-line">> CONNECTION_ESTABLISHED.</div>
+            <div class="loader-line">> ACCESS_GRANTED.</div>
+        </div>
+    </div>
+
+    <header>
+        <h1 class="glitch" data-text="SHIN-TOKYO_95">SHIN-TOKYO 95</h1>
+        <p>[ ACCESSING DATABASE: MAR DEL PLATA SECTOR ]</p>
+    </header>
+
+<header class="main-header">
+    <div class="header-line"></div>
+    <div class="header-content">
+        <div class="brand">
+            <span class="glitch-text" data-text="SHIN-TOKYO_95">SHIN-TOKYO_95</span>
+            <span class="status-tag">STATUS: ONLINE</span>
+        </div>
+        
+        <nav class="header-nav">
+            <a href="#apparel" class="nav-item group">
+                <span class="bracket">[</span><span class="nav-label">APPAREL_DATA</span><span class="bracket">]</span>
+                <span class="sub-tag">SEC-01</span>
+            </a>
+            
+            <a href="#soft-goods" class="nav-item group">
+                <span class="bracket">[</span><span class="nav-label">SOFT_GOODS</span><span class="bracket">]</span>
+                <span class="sub-tag">SEC-02</span>
+            </a>
+
+            <a href="#mdq-hub" class="nav-item group">
+                <span class="bracket">[</span><span class="nav-label">MDQ_HUB</span><span class="bracket">]</span>
+                <span class="sub-tag">LOC-7</span>
+            </a>
+
+            <div class="nav-item system-data">
+                <span class="nav-label" id="live-clock">00:00:00</span>
+                <span class="sub-tag bg-green">SYS_TIME</span>
+            </div>
+        </nav>
+    </div>
+</header>
+<section id="about-manifesto" class="manifesto-section">
+    <div class="manifesto-container">
+        <div class="glitch-title" data-text="[_MANIFESTO_v1.0] primary_goal">[_MANIFESTO_v1.0] primary_goal</div>
+        
+        <div class="manifesto-content">
+            <p class="typing-text">
+                > SHIN-TOKYO 95 no es una marca de indumentaria. Es un experimento de recuperación estética nacido en el 
+                <span class="highlight">SECTOR-7 (Mar del Plata)</span>. 
+            </p>
+            <p>
+                Nuestra misión es interceptar la nostalgia de 1995 y procesarla mediante tecnología de impresión moderna. 
+                Cada unidad entregada es un archivo físico de una era que nunca terminó.
+            </p>
+        </div>
+
+        <div class="innovation-grid">
+            <div class="inn-card">
+                <span class="icon">01</span>
+                <h4>HARDWARE_QUALITY</h4>
+                <p>Algodón premium de alto gramaje. Diseñado para resistir el paso del tiempo en la red física.</p>
+            </div>
+            <div class="inn-card">
+                <span class="icon">02</span>
+                <h4>ANALOG_SYNC</h4>
+                <p>Integramos elementos analógicos (diskettes, códigos QR, lofi) en cada entrega de producto.</p>
+            </div>
+            <div class="inn-card">
+                <span class="icon">03</span>
+                <h4>LOCAL_NODE</h4>
+                <p>Operamos directamente desde MDQ, eliminando intermediarios y conectando con la comunidad local.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="system-status">
+        <!--Linea nueva empieza (Filtros para ids en objetos)-->
+        <div class="filter-controls">
+            <span class="filter-label">SELECT_DATA_TYPE:</span>
+            <button class="filter-btn active" onclick="filterCategory('all')">ALL_UNITS</button>
+            <button class="filter-btn" onclick="filterCategory('remeras')">APPAREL</button>
+            <button class="filter-btn" onclick="filterCategory('buzos')">SOFT_GOODS</button>
+            <button class="filter-btn" onclick="filterCategory('accesorios')">MDQ_HUB</button>
+        </div>
+
+        <!--Linea nueva termina-->
+        <div class="status-container">
+            <div class="mission-title">
+                <span class="blink">●</span> CURRENT_MISSION: ARCHIVE_95_DROP
+            </div>
+        
+            <div class="progress-wrapper">
+                <div class="progress-label">STOCK_AVAILABILITY:</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 65%;"></div>
+                </div>
+                <div class="progress-percentage">65%</div>
+            </div>
+
+            <div class="status-grid">
+                <div class="status-item">
+                    <span class="label">LOCATION:</span>
+                    <span class="value">MAR DEL PLATA / SECTOR-7</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">FABRIC_TYPE:</span>
+                    <span class="value">HEAVY_COTTON_24/1</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">ENCRYPTION:</span>
+                    <span class="value">DTF_PRINT_v2.0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!--Ropas a partir de aca-->
+        <!--Colocar Id="apparel" en cada remera que quiera redirigirlo desde los botones de arriba-->
+        <!--Colocar Id="soft-goods" en cada buzo que quiera redirigirlo desde los botones de arriba-->
+        <!--Colocar Id="mdq-hub" en cada accesorio que quiera redirigirlo desde los botones de arriba-->
+
+        <!--REMERAS-->
+        <section class="product-section" id="apparel">
+            <h2 class="section-title">[ SECTOR_01: APPAREL_DATA ]</h2>
+    
+            <div class="slider-container">
+
+                <div class="slider-track" id="track-remeras">
+                    <div class="product-card remeras">
+                        <img src="img/REMERANW1.png" alt="UNIT-01">
+                        <h3>UNIT-01 / PROTO_TYPE</h3>
+                        <p>Diseño 01 - Edicion Limitada</p>
+                        <p class="price">$25.000 ARS</p>
+                        <a href="https://wa.me/5492236682757?text=Hola!%20Me%20interesa%20la%20remera%20UNIT-01%20Oversize" class="btn-ws">ADQUIRIR PRODUCTO</a>
+                    </div>
+
+                    <div class="product-card remeras">
+                        <img src="img/REMERANW2.png" alt="Cyberia">
+                        <h3>UNIT-02 / IMPACT_V3</h3>
+                        <p>Diseño Impact_v3 - Edición Limitada</p>
+                        <p class="price">$25.000 ARS</p>
+                        <a href="https://wa.me/5492236682757?text=Hola!%20Me%20interesa%20la%20remera%20Cyberia%20Archive" class="btn-ws">ADQUIRIR PRODUCTO</a>
+                    </div>
+
+                    <div class="product-card remeras">
+                        <img src="img/REMERANW3.png" alt="Cyberia">
+                        <h3>UNIT-03 / NEURON_GHOST</h3>
+                        <p>Diseño Neuron_Ghost - Edición Limitada</p>
+                        <p class="price">$25.000 ARS</p>
+                        <a href="https://wa.me/5492236682757?text=Hola!%20Me%20interesa%20la%20remera%20Cyberia%20Archive" class="btn-ws">ADQUIRIR PRODUCTO</a>
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+            <!--BUZOS-->
+        <section class="product-section" id="soft-goods">
+            <h2 class="section-title">[ SECTOR_02: SOFT_GOODS ]</h2>
+
+            <div class="slider-container">
+                <div class="slider-track" id="track-buzos">
+                    <div class="product-card buzos">
+                        <img src="img/BUZO2.png" alt="Buzo Berserk">
+                        <h3>INDUSTRIAL_CORE</h3>
+                        <p>Diseño Industrial - Edición Limitada</p>
+                        <p class="price">$30.000 ARS</p>
+                        <a href="https://wa.me/5492236682757?text=Hola!%20Me%20interesa%20el%20buzo%20INDUSTRIAL_CORE" class="btn-ws">ADQUIRIR PRODUCTO</a>
+                    </div>
+
+                    <div class="product-card buzos">
+                        <img src="img/BUZO3.png" alt="Buzo Berserk">
+                        <h3>IMPACT_V3</h3>
+                        <p>Diseño Crimson - Edición Limitada</p>
+                        <p class="price">$40.000 ARS</p>
+                        <a href="https://wa.me/5492236682757?text=Hola!%20Me%20interesa%20el%20buzo%20IMPACT_V3" class="btn-ws">ADQUIRIR PRODUCTO</a>
+                    </div>
+
+                    <div class="product-card buzos">
+                        <img src="img/BUZO4.png" alt="Buzo Berserk">
+                        <h3>GHOST_SHELL</h3>
+                        <p>Diseño Ghost - Edición Limitada</p>
+                        <p class="price">$35.000 ARS</p>
+                        <a href="https://wa.me/5492236682757?text=Hola!%20Me%20interesa%20el%20buzo%20GHOST_SHELL" class="btn-ws">ADQUIRIR PRODUCTO</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+            <!--ACCESORIOS-->
+        <section class="product-section" id="mdq-hub">
+            <h2 class="section-title">[ SECTOR_03: MDQ_HUB ]</h2>
+
+            <div class="slider-container">
+                <div class="slider-track" id="track-accesorios">
+                    <div class="product-card accesorios">
+                        <img src="img/ACCESORIO1.png" alt="Buzo Berserk">
+                        <h3>GORRA SHIN-95</h3>
+                        <p>Diseño SHIN-TOKYO 95 - Edición Limitada</p>
+                        <p class="price">$15.000 ARS</p>
+                        <a href="https://wa.me/5492236682757?text=Hola!%20Me%20interesa%20el%20buzo%20Berserk%20Mode" class="btn-ws">ADQUIRIR PRODUCTO</a>
+                    </div>
+
+                    <div class="product-card accesorios">
+                        <img src="img/ACCESORIO2.png" alt="Buzo Berserk">
+                        <h3>MEDIAS SIGNAL_SOX</h3>
+                        <p>Diseño SHIN-TOKYO 95 - Edición Limitada</p>
+                        <p class="price">$5.000 ARS</p>
+                        <a href="https://wa.me/5492236682757?text=Hola!%20Me%20interesa%20el%20buzo%20Berserk%20Mode" class="btn-ws">ADQUIRIR PRODUCTO</a>
+                    </div>
+
+                    <div class="product-card accesorios">
+                        <img src="img/ACCESORIO3.png" alt="Buzo Berserk">
+                        <h3>CARGO_UNIT</h3>
+                        <p>Diseño Tactico - Edición Limitada</p>
+                        <p class="price">$10.000 ARS</p>
+                        <a href="https://wa.me/5492236682757?text=Hola!%20Me%20interesa%20el%20buzo%20Berserk%20Mode" class="btn-ws">ADQUIRIR PRODUCTO</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!--MUSICAAAA-->
+    <div class="audio-player">
+        <span>AUDIO_SYSTEM: ON</span>
+        <audio id="bg-music" loop>
+            <source src="fondomp3.mp3" type="audio/mpeg">
+        </audio>
+        <button id="music-ctrl" onclick="toggleMusic()">PLAY</button>
+    </div>
+
+<script>
+function toggleMusic() {
+    const music = document.getElementById('bg-music');
+    const btn = document.getElementById('music-ctrl');
+    
+    if (music.paused) {
+        music.play();
+        btn.innerText = "PAUSE";
+        btn.style.borderColor = "#00ff41"; // Cambia a verde cuando suena
+        btn.style.color = "#00ff41";
+    } else {
+        music.pause();
+        btn.innerText = "PLAY";
+        btn.style.borderColor = "#ff0055"; // Vuelve a rojo en pausa
+        btn.style.color = "#ff0055";
+    }
+}
+</script>
+    <div id="console-log" style="font-size: 12px; color: #00ff41; padding: 10px;">
+    > Initializing...
+    </div>
+
+    <section id="terminal-container">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">SHIN-TOKYO_OS v1.0 - TERMINAL</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="output">
+                    <div>> SHIN-TOKYO_OS [Version 1.0.95]</div>
+                    <div>> (c) 1995 Shin-Tokyo Corp. All rights reserved.</div>
+                    <div>> Type 'HELP' for a list of available commands.</div>
+                    <br>
+                </div>
+                <div class="input-line">
+                    <span class="prompt">></span>
+                    <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+                    <span class="cursor">_</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--ACA VA EL FAQ-->
+    <section id="faq-system" class="faq-section">
+    <div class="faq-container">
+        <h2 class="section-title text-center">[ SYSTEM_SPECS / FAQ ]</h2>
+        
+        <div class="faq-grid">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="prompt">></span> ¿CUÁL ES EL CALCE DE LAS PRENDAS?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Todas nuestras unidades son <span class="highlight">OVERSIZE</span>. El corte es cuadrado (boxy fit) con hombros caídos, emulando la moda urbana japonesa de los 90. Si buscás un calce estándar, te recomendamos pedir un talle menos.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="prompt">></span> ¿CÓMO SE COORDINAN LAS ENTREGAS EN MDQ?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Operamos desde el <span class="highlight">SECTOR-7 (Mar del Plata)</span>. Al finalizar tu pedido por WhatsApp, coordinamos un punto de encuentro (Plaza Mitre, Güemes o Constitución) o envío por cadetería local en 24/48hs.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="prompt">></span> ¿QUÉ TÉCNICA DE ESTAMPADO UTILIZAN?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Utilizamos <span class="highlight">DTF Premium de alta resolución</span>. Esto permite colores neón vibrantes y una durabilidad extrema a los lavados, manteniendo el detalle de los blueprints técnicos de cada diseño.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="prompt">></span> ¿CÓMO CUIDO MI UNIDAD SHIN-TOKYO?
+                    <span class="arrow">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Lavar siempre con agua fría y del revés. <span class="warning">¡ADVERTENCIA!</span> No planchar directamente sobre el estampado. Secar a la sombra para mantener la integridad de los datos (colores).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--ULTIMO CAMBIO-->
+    <div class="sector-divider">
+    <div class="line"></div>
+    <h2 class="sector-title">[SCTR_04: BASE_OPERATIONS]</h2>
+    <div class="line"></div>
+</div>
+
+<section id="contact-base" class="base-container">
+    <div class="base-grid">
+        <div class="base-info">
+            <div class="info-box">
+                <span class="label">LOCATION_NODE:</span>
+                <span class="value">MAR DEL PLATA, ARG</span>
+            </div>
+            <div class="info-box">
+                <span class="label">COORDINATES:</span>
+                <span class="value">38.0055° S, 57.5426° W</span>
+            </div>
+            <div class="info-box">
+                <span class="label">LOGISTICS:</span>
+                <span class="value">NATIONWIDE_SHIPPING_v2.1</span>
+            </div>
+            <div class="status-display">
+                <div class="radar-circle"></div>
+                <p>SCANNING_FOR_DELIVERIES...</p>
+            </div>
+        </div>
+
+        <div class="base-action">
+            <p class="warning">ESTABLISHING ENCRYPTED CONNECTION...</p>
+            <p>Para consultas sobre stock, talles o envíos personalizados en la ciudad, establecé contacto vía protocolo WhatsApp.</p>
+            <a href="https://wa.me/5492236682757?text=Hola!%20Quisiera%20consultar%20sobre%20el%20Stock%20disponible" class="btn-contact">>> OPEN_COMMUNICATION_CHANNEL</a>
+            
+            <div class="system-logs">
+                <p>> [LOG] Esperando señal de usuario...</p>
+                <p>> [LOG] Envíos locales MDQ activos.</p>
+                <p>> [LOG] SHIN-TOKYO_95 operativo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <div class="footer-line"></div>
+        <div class="footer-content">
+            <p>TERMINAL_ID: ST95-MDQ | VERSION: 1.0.4</p>
+            <p>© 2026 SHIN-TOKYO 95 - ALL RIGHTS RESERVED</p>
+            <div class="social-links">
+                <a href="#">INSTAGRAM</a> // <a href="#">TWITTER_X</a> // <a href="#">TIKTOK</a>
+            </div>
+        </div>
+    </footer>
+<script>
+    // Esto se ejecuta después de que TODO (imágenes, música, etc) cargó
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            window.scrollTo(0, 0);
+        }, 10); // Un pequeño retraso de 10ms para ganarle al autoscroll del navegador
+    });
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
