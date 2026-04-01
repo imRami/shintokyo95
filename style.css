@@ -945,12 +945,16 @@ footer a:hover { text-decoration: underline; }
 
     /* Tarjetas de Producto */
     .product-card {
-        width: 100%;
-        margin: 0 auto;
+        width: 100% !important;
+        margin: 0 auto 20px auto;
+        box-sizing: border-box;
+        padding: 15px;
     }
 
     .product-card img {
+        width: 100%;
         height: auto; /* Que la imagen no se deforme */
+        object-fit: contain;
     }
 
     /* Base de Operaciones (Contacto) */
