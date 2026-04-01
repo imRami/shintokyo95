@@ -1055,3 +1055,27 @@ footer a:hover { text-decoration: underline; }
         grid-template-columns: 1fr !important; /* Una sola columna de ancho total */
     }
 }
+/* --- LA SOLUCIÓN MÁS SIMPLE: FLUJO VERTICAL --- */
+
+/* 1. Obligamos al contenedor a que sea una lista simple, no una rejilla */
+.container, .product-grid, #products {
+    display: block !important; 
+    max-width: 500px !important; /* Ajustá este ancho a tu gusto para la remera */
+    margin: 0 auto !important;   /* Esto centra la lista en la pantalla */
+    padding: 20px !important;
+}
+
+/* 2. Cada tarjeta de producto se vuelve un bloque completo */
+.product-card {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 40px !important; /* Espacio entre una remera y otra */
+    float: none !important;         /* Por si algún código viejo interfiere */
+}
+
+/* 3. La imagen ocupa todo el ancho de su tarjeta */
+.product-card img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
