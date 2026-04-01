@@ -910,3 +910,56 @@ footer a:hover { text-decoration: underline; }
 @media (max-width: 768px) {
     .base-grid { grid-template-columns: 1fr; }
 }
+
+/*PARA CELULAR*/
+/* --- [SCTR_MOBILE: OPTIMIZATION] --- */
+
+@media (max-width: 768px) {
+    /* Ajuste de Contenedores: de 3 columnas a 1 sola */
+    .container {
+        display: grid;
+        grid-template-columns: 1fr !important; /* Fuerza una sola columna */
+        padding: 10px;
+        gap: 20px;
+    }
+
+    /* Títulos y Header */
+    h1 {
+        font-size: 1.8rem; /* Achicamos el logo para que no se corte */
+        letter-spacing: 5px;
+    }
+
+    .sector-title {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    /* Tarjetas de Producto */
+    .product-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .product-card img {
+        height: auto; /* Que la imagen no se deforme */
+    }
+
+    /* Base de Operaciones (Contacto) */
+    .base-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .base-container {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    /* Reproductor de Audio (Opcional: moverlo o achicarlo) */
+    #audio-player {
+        width: 90%;
+        left: 5%;
+        bottom: 10px;
+        font-size: 0.7rem;
+    }
+}
