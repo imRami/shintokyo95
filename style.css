@@ -10,10 +10,12 @@ img {
 /* ESPECÍFICO PARA LAS CARDS DE PRODUCTO */
 .product-card img {
     width: 100%;
+    aspect-ratio: 1 / 1;
     /* Limitamos la altura en PC para que no desborde la pantalla */
     max-height: 450px; 
     /* 'contain' asegura que se vea toda la remera sin cortarse */
-    object-fit: contain; 
+    object-fit: cover; 
+    object-position: center;
     filter: grayscale(100%);
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     background: rgba(0, 0, 0, 0.2); /* Fondo sutil para el área vacía si la foto es vertical */
@@ -26,8 +28,19 @@ img {
 
 /* Ajuste para que en celulares sigan ocupando el ancho necesario */
 @media (max-width: 768px) {
+    .product-card {
+        width: 90% !important;
+        margin: 0 auto 20px auto !important;
+        padding: 10px !important;
+    }
     .product-card img {
-        max-height: 400px; /* Un poco más bajas en móvil */
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        max-height: 350px; /* Un poco más bajas en móvil */
+    }
+    .container {
+        padding: 20px 10px !important;
+        gap:  20px !important;
     }
 }
 
