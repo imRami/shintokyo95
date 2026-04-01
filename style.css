@@ -1021,3 +1021,37 @@ footer a:hover { text-decoration: underline; }
         object-fit: contain !important;
     }
 }
+/* --- SOLUCIÓN DEFINITIVA: 1 FOTO POR FILA EN CELULAR --- */
+
+@media (max-width: 768px) {
+    /* 1. Anulamos las columnas del grid por completo */
+    .container, 
+    .product-grid, 
+    #products, 
+    .base-grid {
+        display: block !important; /* Cambiamos grid por block para que fluyan hacia abajo */
+        width: 100% !important;
+        padding: 10px !important;
+    }
+
+    /* 2. Forzamos que la card ocupe casi todo el ancho y se centre */
+    .product-card {
+        width: 90% !important; 
+        max-width: 400px !important; 
+        margin: 0 auto 30px auto !important; /* Centra la card y da espacio abajo */
+        display: block !important;
+        float: none !important; /* Por si hay algún float viejo */
+    }
+
+    /* 3. La imagen se ajusta al ancho de la card sin deformarse */
+    .product-card img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    /* 4. IMPORTANTE: Si usas grid-template-columns, lo reseteamos aquí */
+    .container, .product-grid {
+        grid-template-columns: 1fr !important; /* Una sola columna de ancho total */
+    }
+}
