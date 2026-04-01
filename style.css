@@ -1,3 +1,12 @@
+/* --- [GBL_RES: IMAGE_CONTAINMENT] --- */
+
+/* Esta regla fuerza a TODAS las imágenes a no ser nunca más anchas que su contenedor */
+img {
+    max-width: 100% !important; /* No superes el ancho de tu "caja" madre */
+    height: auto !important;     /* Mantené la proporción para no deformarte */
+    display: block;              /* Evitá espacios raros abajo */
+}
+
 /* ESTÉTICA RETRO-FUTURE / EVANGELION */
         body {
             background-color: #0a0a0a;
