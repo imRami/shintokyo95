@@ -449,10 +449,33 @@ body.loading {
     text-shadow: 0 0 5px #00ff41;
 }
 
-/* Responsive: Si la pantalla es chica, achicamos el texto */
 @media (max-width: 768px) {
-    .nav-label { font-size: 0.6rem; }
-    .sub-tag { display: none; } /* Escondemos los sectores en celular para que entre todo */
+    /* Forzamos una sola columna en TODOS los contenedores */
+    .container, 
+    .product-grid, 
+    #products { 
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 10px !important;
+    }
+
+    .product-card {
+        width: 95% !important; /* Casi todo el ancho del celu */
+        max-width: none !important;
+        margin-bottom: 30px !important;
+        padding: 15px !important;
+        border: 1px solid #00ff41; /* Reforzamos el borde ciber */
+    }
+
+    .product-card img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Ajuste de textos para que no se corten */
+    h3 { font-size: 1.2rem !important; }
+    .price { font-size: 1.1rem !important; }
 }
 
 .filter-controls {
@@ -976,3 +999,12 @@ footer a:hover { text-decoration: underline; }
         font-size: 0.7rem;
     }
 }
+.header-nav, .top-bar {
+        display: none; /* Esto oculta esos links que se pisan en el celu */
+    }
+    
+    h1 {
+        font-size: 1.5rem !important;
+        text-align: center;
+        width: 100%;
+    }
