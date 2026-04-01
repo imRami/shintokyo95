@@ -1079,3 +1079,38 @@ footer a:hover { text-decoration: underline; }
     height: auto !important;
     display: block !important;
 }
+/* --- ESTO ANULA CUALQUIER GRID Y FUERZA LISTA VERTICAL --- */
+
+/* 1. Desactivamos el sistema de columnas en todos los posibles contenedores */
+.container, .product-grid, #products, [class*="grid"], main {
+    display: block !important; 
+    grid-template-columns: none !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 600px !important; /* Ancho cómodo para ver la remera */
+    margin: 0 auto !important;
+    padding: 10px !important;
+}
+
+/* 2. Cada card se vuelve un bloque solitario en su fila */
+.product-card {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 40px !important; /* Espacio entre productos */
+    float: none !important;
+    clear: both !important; /* Evita que nada se le pegue a los costados */
+}
+
+/* 3. La imagen se estira al ancho de la card y mantiene su proporción */
+.product-card img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* 4. Por si tenés algún 'display: grid' en el body o niveles superiores */
+body {
+    display: block !important;
+}
