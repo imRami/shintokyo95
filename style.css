@@ -26,21 +26,48 @@ img {
     transform: scale(1.02); /* Un pequeño zoom ciberpunk */
 }
 
-/* Ajuste para que en celulares sigan ocupando el ancho necesario */
+/* --- FIX TOTAL PARA MÓVIL: LISTA VERTICAL --- */
 @media (max-width: 768px) {
+    /* 1. Forzamos al contenedor a ser una sola columna limpia */
+    .container, .product-grid, #products {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 15px !important;
+        gap: 40px !important; /* Espacio entre una remera y otra */
+    }
+
+    /* 2. La card ocupa casi todo el ancho pero con aire a los costados */
     .product-card {
-        width: 90% !important;
-        margin: 0 auto 20px auto !important;
-        padding: 10px !important;
+        width: 100% !important;
+        max-width: 350px !important; /* Limita el ancho para que no se vea gigante */
+        box-sizing: border-box !important;
+        border: 1px solid #00ff41 !important;
+        background: rgba(0, 255, 65, 0.05) !important;
+        margin: 0 auto !important;
+        display: block !important;
     }
+
+    /* 3. La imagen se ajusta al ancho de la card y no se deforma */
     .product-card img {
-        aspect-ratio: 1 / 1;
-        object-fit: contain;
-        max-height: 350px; /* Un poco más bajas en móvil */
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important; /* Dejamos que fluya verticalmente */
+        aspect-ratio: auto !important; /* Evitamos recortes raros */
+        display: block !important;
+        filter: grayscale(0%); /* En el celu mejor que se vean los colores de una */
     }
-    .container {
+
+    /* 4. Ajustes de textos para que no se rompan */
+    h1 { 
+        font-size: 1.6rem !important; 
+        letter-spacing: 3px !important; 
         padding: 20px 10px !important;
-        gap:  20px !important;
+    }
+
+    /* 5. Limpieza de elementos que estorban en móvil */
+    .header-nav, .top-bar, .audio-player {
+        display: none !important; 
     }
 }
 
