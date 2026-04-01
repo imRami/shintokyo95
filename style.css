@@ -7,6 +7,30 @@ img {
     display: block;              /* Evitá espacios raros abajo */
 }
 
+/* ESPECÍFICO PARA LAS CARDS DE PRODUCTO */
+.product-card img {
+    width: 100%;
+    /* Limitamos la altura en PC para que no desborde la pantalla */
+    max-height: 450px; 
+    /* 'contain' asegura que se vea toda la remera sin cortarse */
+    object-fit: contain; 
+    filter: grayscale(100%);
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(0, 0, 0, 0.2); /* Fondo sutil para el área vacía si la foto es vertical */
+}
+
+.product-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.02); /* Un pequeño zoom ciberpunk */
+}
+
+/* Ajuste para que en celulares sigan ocupando el ancho necesario */
+@media (max-width: 768px) {
+    .product-card img {
+        max-height: 400px; /* Un poco más bajas en móvil */
+    }
+}
+
 /* ESTÉTICA RETRO-FUTURE / EVANGELION */
         body {
             background-color: #0a0a0a;
@@ -449,6 +473,7 @@ body.loading {
     text-shadow: 0 0 5px #00ff41;
 }
 
+/* BLOQUE ÚNICO PARA CELULAR - REEMPLAZA LOS DOS ANTERIORES */
 @media (max-width: 768px) {
     /* Forzamos una sola columna en TODOS los contenedores */
     .container, 
@@ -466,6 +491,7 @@ body.loading {
         margin-bottom: 30px !important;
         padding: 15px !important;
         border: 1px solid #00ff41; /* Reforzamos el borde ciber */
+        flex: none !important; /* RETIRADO: flex: 0 0 300px para que no se salga de pantalla */
     }
 
     .product-card img {
@@ -476,6 +502,20 @@ body.loading {
     /* Ajuste de textos para que no se corten */
     h3 { font-size: 1.2rem !important; }
     .price { font-size: 1.1rem !important; }
+
+    h1 { font-size: 1.5rem !important; letter-spacing: 5px; text-align: center; width: 100%; }
+    
+    .header-nav, .top-bar {
+        display: none !important; /* Ocultamos el menú que se pisa */
+    }
+
+    .audio-player {
+        display: none !important; /* RETIRADO: El reproductor de música en celular */
+    }
+
+    .base-grid { 
+        grid-template-columns: 1fr !important; 
+    }
 }
 
 .filter-controls {
@@ -670,19 +710,6 @@ body.loading {
     width: max-content;
 }
 
-.product-card {
-    flex: 0 0 300px; /* Ancho fijo para cada producto */
-    background: rgba(0, 0, 0, 0.8);
-    border: 1px solid #333;
-    padding: 15px;
-    text-align: center;
-}
-
-.product-card img {
-    width: 100%;
-    height: auto;
-}
-
 /* Contenedor del reproductor */
 .audio-player {
     position: fixed;
@@ -765,21 +792,7 @@ footer a {
 }
 footer a:hover { text-decoration: underline; }
 
-@media (max-width: 768px) {
-    h1 { font-size: 1.8rem; letter-spacing: 5px; }
-    .container {
-        grid-template-columns: 1fr; /* Una remera debajo de la otra */
-        padding: 20px;
-    }
-    .product-card {
-        min-height: auto;
-    }
-    .audio-player {
-        bottom: 10px;
-        right: 10px;
-        padding: 5px 10px;
-    }
-}
+/* RETIRADO: Se eliminó el bloque @media que estaba duplicado aquí al final */
 
 .glitch {
     position: relative;
@@ -938,73 +951,4 @@ footer a:hover { text-decoration: underline; }
     box-shadow: 0 0 20px #00ff41;
 }
 
-/* Responsive para el contacto */
-@media (max-width: 768px) {
-    .base-grid { grid-template-columns: 1fr; }
-}
-
-/*PARA CELULAR*/
-/* --- [SCTR_MOBILE: OPTIMIZATION] --- */
-
-@media (max-width: 768px) {
-    /* Ajuste de Contenedores: de 3 columnas a 1 sola */
-    .container {
-        display: grid;
-        grid-template-columns: 1fr !important; /* Fuerza una sola columna */
-        padding: 10px;
-        gap: 20px;
-    }
-
-    /* Títulos y Header */
-    h1 {
-        font-size: 1.8rem; /* Achicamos el logo para que no se corte */
-        letter-spacing: 5px;
-    }
-
-    .sector-title {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    /* Tarjetas de Producto */
-    .product-card {
-        width: 100% !important;
-        margin: 0 auto 20px auto;
-        box-sizing: border-box;
-        padding: 15px;
-    }
-
-    .product-card img {
-        width: 100%;
-        height: auto; /* Que la imagen no se deforme */
-        object-fit: contain;
-    }
-
-    /* Base de Operaciones (Contacto) */
-    .base-grid {
-        grid-template-columns: 1fr !important;
-        gap: 20px;
-    }
-
-    .base-container {
-        margin: 20px 10px;
-        padding: 15px;
-    }
-
-    /* Reproductor de Audio (Opcional: moverlo o achicarlo) */
-    #audio-player {
-        width: 90%;
-        left: 5%;
-        bottom: 10px;
-        font-size: 0.7rem;
-    }
-}
-.header-nav, .top-bar {
-        display: none; /* Esto oculta esos links que se pisan en el celu */
-    }
-    
-    h1 {
-        font-size: 1.5rem !important;
-        text-align: center;
-        width: 100%;
-    }
+/* RETIRADO: Se eliminó el bloque @media que estaba duplicado aquí al final */
