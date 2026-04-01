@@ -992,3 +992,32 @@ footer a:hover { text-decoration: underline; }
 }
 
 /* RETIRADO: Se eliminó el bloque @media que estaba duplicado aquí al final */
+
+/* --- ESTO VA AL FINAL DE TU CSS PARA FORZAR LA LISTA EN CELULAR --- */
+
+@media (max-width: 768px) {
+    /* 1. Forzamos que el contenedor de los productos sea una sola columna */
+    .container, .product-grid, #products, [class*="grid"] {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 20px 0 !important;
+    }
+
+    /* 2. Hacemos que cada tarjeta de remera ocupe el ancho del celu */
+    .product-card {
+        width: 90% !important;
+        max-width: 400px !important; /* Para que no se estire infinito en tablets */
+        margin-bottom: 30px !important;
+        display: block !important;
+    }
+
+    /* 3. La imagen se adapta al ancho de la tarjeta */
+    .product-card img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+    }
+}
